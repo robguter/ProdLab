@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD50AFD1-70D7-4CF5-BC42-8E35AD0AF2DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProdLab.LogicadeNegocio</RootNamespace>
+    <AssemblyName>ProdLab.LogicadeNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\DepositoBL.cs" />
+    <Compile Include="BL\IndolesBL.cs" />
+    <Compile Include="BL\InvenstkBL.cs" />
+    <Compile Include="BL\MaestroBL.cs" />
+    <Compile Include="BL\MaestrodetBL.cs" />
+    <Compile Include="BL\MovdetBL.cs" />
+    <Compile Include="BL\MovinvBL.cs" />
+    <Compile Include="BL\OrdacoBL.cs" />
+    <Compile Include="BL\OrdacodetBL.cs" />
+    <Compile Include="BL\OrdempBL.cs" />
+    <Compile Include="BL\OrdEmpDetBL.cs" />
+    <Compile Include="BL\OrdProdBL.cs" />
+    <Compile Include="BL\OrdproddetBL.cs" />
+    <Compile Include="BL\ProductoBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProdLab.AccesoDatos\ProdLab.AccesoDatos.csproj">
+      <Project>{a461c12a-cbf6-41ea-8df8-a5a966433913}</Project>
+      <Name>ProdLab.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProdLab.EntidadesdeNegocio\ProdLab.EntidadesdeNegocio.csproj">
+      <Project>{3c91fc25-844b-4c74-973b-1d963fc1ed03}</Project>
+      <Name>ProdLab.EntidadesdeNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
